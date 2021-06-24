@@ -42,18 +42,3 @@ jobs:
         run: flutter analyze lib
       - name: Analyze test
         run: flutter analyze test
-
-  format:
-    name: Format
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '2.2.2'
-          channel: 'stable'
-      - run: flutter pub get
-      - name: Format lib
-        run: flutter format lib --set-exit-if-changed
-      - name: Format test
-        run: flutter format test --set-exit-if-changed

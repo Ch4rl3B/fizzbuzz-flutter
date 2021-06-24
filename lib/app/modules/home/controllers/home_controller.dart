@@ -13,11 +13,15 @@ class HomeController extends GetxController {
   }
 
   getColor(String s) {
-    switch(s){
-      case "Fizz": return Colors.red;
-      case "Buzz": return Colors.green;
-      case "FizzBuzz": return Colors.amber;
-      default: return Colors.blueGrey;
+    switch (s) {
+      case "Fizz":
+        return Colors.red;
+      case "Buzz":
+        return Colors.green;
+      case "FizzBuzz":
+        return Colors.amber;
+      default:
+        return Colors.blueGrey;
     }
   }
 }

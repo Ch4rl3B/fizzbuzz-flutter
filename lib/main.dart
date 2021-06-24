@@ -5,13 +5,12 @@ import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
-
 // THE GOAT IS WATCHING...
 
 void main() {
   runApp(
     ScreenUtilInit(
-      builder: () =>  GetMaterialApp(
+      builder: () => GetMaterialApp(
         title: "FizzBuzz",
         initialRoute: AppPages.INITIAL,
         getPages: AppPages.routes,

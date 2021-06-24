@@ -11,7 +11,7 @@ class FizzbuzzProvider extends GetxService {
 
   List<String> generate(int start, int end) {
     List<String> response = <String>[];
-    if(end >= start) {
+    if (end >= start) {
       for (int i in start.rangeTo(end)) {
         var add = (i % 3 == 0 ? 'Fizz' : '') + (i % 5 == 0 ? 'Buzz' : '');
         response.add(add.isBlank ? '$i' : add);

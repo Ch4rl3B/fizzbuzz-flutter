@@ -13,18 +13,25 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text.rich(TextSpan(text: "", children: [
-          TextSpan(text: "Fizz", style: TextStyle(color: controller.getColor('Fizz'))),
-          TextSpan(text: "Buzz", style: TextStyle(color: controller.getColor('Buzz'))),
+          TextSpan(
+              text: "Fizz",
+              style: TextStyle(color: controller.getColor('Fizz'))),
+          TextSpan(
+              text: "Buzz",
+              style: TextStyle(color: controller.getColor('Buzz'))),
           TextSpan(text: " by "),
           TextSpan(text: "Ch4rl3"),
-          TextSpan(text: "•", style: TextStyle(color: Theme.of(context).accentColor)),
+          TextSpan(
+              text: "•",
+              style: TextStyle(color: Theme.of(context).accentColor)),
           TextSpan(text: "B"),
         ])),
       ),
       body: Container(
         color: Colors.white,
         child: Obx(
-          () => GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          () => GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
             ),
             itemCount: controller.provider.fizzbuzz.length,
@@ -33,7 +40,11 @@ class HomeView extends GetView<HomeController> {
               return Card(
                 color: controller.getColor(text),
                 child: GridTile(
-                  child: Center(child: Text(text, style: TextStyle(fontSize: 20.sp, color: Colors.white),)),
+                  child: Center(
+                      child: Text(
+                    text,
+                    style: TextStyle(fontSize: 20.sp, color: Colors.white),
+                  )),
                 ),
               );
             },
