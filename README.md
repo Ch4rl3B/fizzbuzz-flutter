@@ -2,6 +2,7 @@
 
 A FizzBuzz random generator that goes from random(x) >= 0 to random(y) >= x + 100
 
+![flutter tests](https://github.com/Ch4rl3B/fizzbuzz-flutter/workflows/fizzbuzz/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/Ch4rl3B/fizzbuzz-flutter/branch/master/graph/badge.svg?token=PNYDX8ZGQU)](https://codecov.io/gh/Ch4rl3B/fizzbuzz-flutter)
 
 ## Getting Started
