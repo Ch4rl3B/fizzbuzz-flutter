@@ -1,4 +1,4 @@
-name: reactive_forms
+name: fizzbuzz
 
 on:
   # Trigger the workflow on push
