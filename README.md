@@ -2,6 +2,8 @@
 
 A FizzBuzz random generator that goes from random(x) >= 0 to random(y) >= x + 100
 
+[![codecov](https://codecov.io/gh/Ch4rl3B/fizzbuzz-flutter/branch/master/graph/badge.svg?token=PNYDX8ZGQU)](https://codecov.io/gh/Ch4rl3B/fizzbuzz-flutter)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
