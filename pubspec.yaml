@@ -1,0 +1,33 @@
+name: fizzbuzz
+description: A FizzBuzz random generator that goes from random(x) >= 0 to random(y) >= x + 100
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Easy Theeming
+  easy_dynamic_theme: ^2.2.0
+  # The fucking best library ever made for State Management, Dependency Injection and more
+  get: ^4.1.4
+  # Line icons for application see: https://icons8.com/line-awesome
+  line_icons: ^2.0.0
+  # Adapt font sizes and other screen options
+  flutter_screenutil: ^5.0.0+2
+  # Some language tools that make everything easier
+  dartx: ^0.7.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# The following section is specific to Flutter.
+flutter:
+  assets:
+    - assets/
