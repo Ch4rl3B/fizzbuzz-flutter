@@ -12,8 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Easy Theeming
-  easy_dynamic_theme: ^2.2.0
   # The fucking best library ever made for State Management, Dependency Injection and more
   get: ^4.1.4
   # Line icons for application see: https://icons8.com/line-awesome

@@ -1,20 +1,23 @@
+import 'package:fizzbuzz/app/modules/home/providers/fizzbuzz_provider.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  FizzbuzzProvider provider = Get.find<FizzbuzzProvider>();
 
-  final count = 0.obs;
   @override
-  void onInit() {
-    super.onInit();
+  void onClose() {
+    //Cleaning the provider
+    provider.fizzbuzz.close();
+    Get.delete<FizzbuzzProvider>();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  getColor(String s) {
+    switch(s){
+      case "Fizz": return Colors.red;
+      case "Buzz": return Colors.green;
+      case "FizzBuzz": return Colors.amber;
+      default: return Colors.blueGrey;
+    }
   }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
 }
