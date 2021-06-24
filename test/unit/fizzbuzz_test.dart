@@ -38,6 +38,9 @@ void main() {
 
     //Expect fizzbuzz have exactly one 'Buzz'
     expect(fizzbuzz.where((element) => element == 'Buzz').length, 1);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Generate FizzBuzz array from 11 to 20 have 2 Fizz and 1 Buzz and 1 FizzBuzz', (){
@@ -58,6 +61,9 @@ void main() {
 
     //Expect fizzbuzz have exactly one 'FizzBuzz'
     expect(fizzbuzz.where((element) => element == 'FizzBuzz').length, 1);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Generate FizzBuzz array from 5 to 1 will return nothing', (){
@@ -69,6 +75,9 @@ void main() {
 
     //Expect array is not empty
     expect(fizzbuzz.isEmpty, true);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Generate FizzBuzz array from 15 to 15 will return one FizzBuzz', (){
@@ -86,6 +95,9 @@ void main() {
 
     //Expect fizzbuzz have 'FizzBuzz'
     expect(fizzbuzz[0], 'FizzBuzz');
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Generate FizzBuzz array from random x to random y have (y - x + 1 elements) and contains Fizz or Buzz or FizzBuzz', (){
@@ -108,6 +120,9 @@ void main() {
 
     //Expect fizzbuzz have 'Fizz' 'Buzz' or 'FizzBuzz' on it
     expect(fizzbuzz.where((element) => element == 'Fizz' ||  element == 'Buzz' || element == 'FizzBuzz').length > 0, true);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Provider fizzbuzz is observable', (){
@@ -133,14 +148,14 @@ void main() {
 
     //Expect fizzbuzz value is ['1','2','3','4','5']
     expect(Get.find<FizzbuzzProvider>().fizzbuzz.join(',') == ['1', '2', '3', '4', '5'].join(','), true);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Provider can generate random FizzBuzz array', (){
     //Given provider initialization
     Get.put(FizzbuzzProvider());
-
-    //Expect fizzbuzz is empty
-    expect(Get.find<FizzbuzzProvider>().fizzbuzz.isEmpty, true);
 
     //When we call method to generate random
     Get.find<FizzbuzzProvider>().generateRandom();
@@ -150,6 +165,9 @@ void main() {
 
     //Expect fizzbuzz have 'Fizz' 'Buzz' or 'FizzBuzz' on it
     expect(Get.find<FizzbuzzProvider>().fizzbuzz.where((element) => element == 'Fizz' ||  element == 'Buzz' || element == 'FizzBuzz').length > 0, true);
+
+    //Then we close the instance
+    Get.reset();
   });
 
   test('Provider can generate multiple random FizzBuzz distinct', (){
@@ -177,5 +195,8 @@ void main() {
 
     //Expect generated is not equal to previous
     expect(previous != Get.find<FizzbuzzProvider>().fizzbuzz.join(','), true);
+
+    //Then we close the instance
+    Get.reset();
   });
 }
